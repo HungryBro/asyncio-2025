@@ -15,6 +15,7 @@ if __name__ == "__main__":
 
     threads = list()
     for index in range(3):
+        logging.info("Main: create and start tread %d.", index)
         x = threading.Thread(target=thread_function, args=(index,))
         threads.append(x)
         x.start()
