@@ -12,8 +12,10 @@ if __name__ == '__main__':
     # Begin of main thread
     print(f'{ctime()} Main  : Start Cooking.')
     start_time = time()
+    
     # Cooking
-    cooking(0)
+    for index in range(2):
+        cooking(index)
     
     duration = time() - start_time
     print(f'{ctime()} Main  : Finished Cooking duration {duration:0.2f} seconds')
