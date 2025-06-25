@@ -20,6 +20,5 @@ async def main():
     for task in started_tasks:
         await task
 
-
 # start the asyncio program
 asyncio.run(main())
