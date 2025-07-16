@@ -2,12 +2,6 @@ import asyncio
 import httpx
 import time
 
-# รายชื่อโปเกม่อน
-pokemon_names = [
-    "pikachu", "bulbasaur", "charmander", "squirtle", "eevee",
-    "snorlax", "gengar", "mewtwo", "psyduck", "jigglypuff"
-]
-
 # สร้าง list เปล่าไว้เก็บข้อมูลโปเกม่อนทั้งหมด
 pokemon_data_list = []
 
