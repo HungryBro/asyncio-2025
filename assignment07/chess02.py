@@ -3,7 +3,7 @@ import asyncio
 from datetime import timedelta
 
 # --- CONFIG ---
-speed = 1000
+speed = 100
 JUDIT_TIME = 5 / speed
 OPPONENT_TIME = 55 / speed
 move_pairs = 30
@@ -42,7 +42,7 @@ async def main():
 
     for board_id, real_time, calculated_time in results:
         print(f"BOARD-{board_id} – 30 Opponent made move with {int(OPPONENT_TIME * speed)} secs.")
-        print(f"BOARD-{board_id} – >>>>>>>>>>>>>>> Finished move in {real_time:.1f} secs.\n")
+        print(f"BOARD-{board_id} – >>>>>>>>>>>>>>> Finished move in {real_time:.1f} secs\n")
 
     total_real_time = max(r[1] for r in results)
     total_time_formatted = timedelta(seconds=round(total_real_time))
