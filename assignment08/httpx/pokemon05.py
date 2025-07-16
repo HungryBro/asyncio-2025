@@ -2,6 +2,12 @@ import asyncio
 import httpx
 import time
 
+# รายชื่อโปเกม่อน
+pokemon_names = [
+    "pikachu", "bulbasaur", "charmander", "squirtle", "eevee",
+    "snorlax", "gengar", "mewtwo", "psyduck", "jigglypuff"
+]
+
 # สร้าง list เปล่าไว้เก็บข้อมูลโปเกม่อนทั้งหมด
 pokemon_data_list = []
 
@@ -47,4 +53,5 @@ async def main():
     print("ใช้เวลา:", round(end - start, 2), "วินาที")
 
 # เรียกใช้งาน
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
