@@ -17,7 +17,7 @@ app.register_blueprint(async_bp, url_prefix="/async")
 app.config["NUMBER_OF_XKCD"] = 7  # Used to control how many XKCD to fetch
 
 # Define root route
-@app.route('/')
+@app.route('/')     
 def index():
     start_time = time.perf_counter()  # Start timer
     end_time = time.perf_counter()    # End timer (immediate since no logic)
