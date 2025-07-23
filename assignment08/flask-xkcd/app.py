@@ -1,5 +1,4 @@
 import time
-import requests as requests
 from flask import Flask, render_template
 
 # Import blueprints from sync and async route folders
