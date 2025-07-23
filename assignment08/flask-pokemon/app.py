@@ -14,7 +14,7 @@ app.register_blueprint(sync_bp, url_prefix="/sync")
 app.register_blueprint(async_bp, url_prefix="/async")
 
 # Define constant using Flask's config dictionary
-app.config["NUMBER_OF_XKCD"] = 10  # Used to control how many XKCD to fetch
+app.config["NUMBER_OF_POKEMON"] = 20  # Used to control how many XKCD to fetch
 
 # Define root route
 @app.route('/')
@@ -24,7 +24,7 @@ def index():
 
     # Render base template with performance timing and empty list
     return render_template('base.html'
-                           , title="Flask XKCD"
+                           , title="Pokemon Flask"
                            , heading="Pokemon Flask"
                            , xkcds=[]   # Placeholder for XKCD or other items
                            , end_time=end_time, start_time=start_time)
