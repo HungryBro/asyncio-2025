@@ -1,5 +1,4 @@
 import time
-import requests
 import random
 from flask import Blueprint, render_template, current_app
 import httpx, asyncio
@@ -40,7 +39,7 @@ def home():
 
     print(f"{time.ctime()} - Get {len(pokemons)} Pokémon. Time taken: {end_time-start_time} seconds")
 
-    return render_template('sync.html',
+    return render_template('async.html',
                            title="Pokémon Flask App",
                            heading="Pokémon Asynchronous Version",
                            pokemons=pokemons,  # ส่งไปใช้ template เดิม แต่เปลี่ยนเนื้อหา
