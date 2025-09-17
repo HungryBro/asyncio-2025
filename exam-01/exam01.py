@@ -12,7 +12,8 @@ async def say_hello():
     print("World")
 
 async def main():
-    say_hello()
+    tasks = [say_hello() for _ in range(1)]
+    await asyncio.gather(*tasks)
 
 asyncio.run(main())
 

@@ -32,7 +32,6 @@ async def main():
     for i in range(3):
         results.append(asyncio.create_task(work(i)))
     for r in results:
-        print("Result:", await r)
+        print(f"Result:{await r}")
 
-asyncio.run(main())
 asyncio.run(main())

@@ -39,6 +39,10 @@ async def worker(id: int):
 async def main():
     tasks = []
     
+    print (f"Worker-{id} is working round",await worker(1))
+    print (f"Worker-{id} is working round",await worker(2))
+    print (f"Worker-{id} is working round",await worker(3))
+    
     # TODO: สร้าง asyncio task สำหรับ worker 3 ตัว
     # hint: ใช้ asyncio.create_task(worker(id))
     

@@ -11,12 +11,12 @@ import asyncio
 
 async def task(name):
     print(f"Task {name} started")
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     print(f"Task {name} finished")
 
 async def main():
     await asyncio.gather(task("A"), task("B"))
     print("All tasks done")
 
-asyncio.run(main)
+asyncio.run(main())
 

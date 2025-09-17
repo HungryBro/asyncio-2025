@@ -39,9 +39,11 @@ async def countdown(name: str, seconds: int):
     print(f"Timer {name} finished")
 
 async def main():
-    timers = [("A", 3), ("B", 5), ("C", 2)]
-    
+    timers = [("A", 3), ("B", 5), ("C", 2)]   
     tasks = []
+
+    print(f"")
+
     # TODO: สร้าง asyncio task สำหรับแต่ละ countdown
     # hint: ใช้ asyncio.create_task(countdown(name, sec))
     
