@@ -37,17 +37,16 @@ async def worker(id: int):
     print(f"Worker-{id} finished")
 
 async def main():
-    tasks = []
-    
-    print (f"Worker-{id} is working round",await worker(1))
-    print (f"Worker-{id} is working round",await worker(2))
-    print (f"Worker-{id} is working round",await worker(3))
     
     # TODO: สร้าง asyncio task สำหรับ worker 3 ตัว
     # hint: ใช้ asyncio.create_task(worker(id))
+    task1 = asyncio.create_task(worker(1))
+    task2 = asyncio.create_task(worker(2))
+    task3 = asyncio.create_task(worker(3))
     
     # TODO: รอให้ทุก task เสร็จ
     # hint: ใช้ await หรือ asyncio.gather
+    await asyncio.gather(task1, task2, task3)
     pass
 
 asyncio.run(main())

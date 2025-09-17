@@ -13,5 +13,5 @@ async def countdown(n):
         await asyncio.sleep(1)
         n -= 1
 
-asyncio.run(countdown(3))
-
+if __name__ == "__main__":
+    asyncio.run(countdown(3))

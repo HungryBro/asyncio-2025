@@ -13,4 +13,5 @@ async def main():
     result = await compute(2, 3)
     print("Result:", result)
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())

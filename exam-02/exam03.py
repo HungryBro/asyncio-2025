@@ -40,9 +40,8 @@ async def countdown(name: str, seconds: int):
 
 async def main():
     timers = [("A", 3), ("B", 5), ("C", 2)]   
-    tasks = []
-
-    print(f"")
+    tasks = [asyncio.create_task(countdown(name, sec)) for name, sec in timers]
+    await asyncio.gather(*tasks)
 
     # TODO: สร้าง asyncio task สำหรับแต่ละ countdown
     # hint: ใช้ asyncio.create_task(countdown(name, sec))

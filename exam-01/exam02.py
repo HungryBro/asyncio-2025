@@ -11,14 +11,16 @@ import asyncio
 
 async def fetch_data():
     await asyncio.sleep(1)
-    return print ("data")
+    return "data"
 
 async def process():
     await asyncio.sleep(2)
     data = await fetch_data()
-    print("Processing", data)
-
-tasks = [process() for _ in range(5)]
+    print("Processing", data)   
 
 async def main():
-    await asyncio.run(*tasks)
+    tasks = [process() for _ in range(5)]
+    await asyncio.gather(*tasks)
+
+if __name__ == "__main__":
+    asyncio.run(main())
